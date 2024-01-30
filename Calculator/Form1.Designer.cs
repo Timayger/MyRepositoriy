@@ -46,16 +46,21 @@
             button14 = new Button();
             button15 = new Button();
             button16 = new Button();
-            label1 = new Label();
+            button17 = new Button();
+            button18 = new Button();
+            button19 = new Button();
+            button20 = new Button();
             SuspendLayout();
             // 
             // textBox1
             // 
+            textBox1.BackColor = SystemColors.Control;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(23, 32);
+            textBox1.Location = new Point(18, 21);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(548, 39);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -66,7 +71,7 @@
             button1.FlatAppearance.MouseDownBackColor = Color.Black;
             button1.FlatAppearance.MouseOverBackColor = Color.Gray;
             button1.ForeColor = SystemColors.InfoText;
-            button1.Location = new Point(23, 92);
+            button1.Location = new Point(18, 179);
             button1.Name = "button1";
             button1.Size = new Size(125, 101);
             button1.TabIndex = 1;
@@ -83,7 +88,7 @@
             button2.FlatAppearance.MouseDownBackColor = Color.Black;
             button2.FlatAppearance.MouseOverBackColor = Color.Gray;
             button2.ForeColor = SystemColors.InfoText;
-            button2.Location = new Point(165, 92);
+            button2.Location = new Point(160, 179);
             button2.Name = "button2";
             button2.Size = new Size(125, 101);
             button2.TabIndex = 2;
@@ -100,7 +105,7 @@
             button3.FlatAppearance.MouseDownBackColor = Color.Black;
             button3.FlatAppearance.MouseOverBackColor = Color.Gray;
             button3.ForeColor = SystemColors.InfoText;
-            button3.Location = new Point(305, 92);
+            button3.Location = new Point(300, 179);
             button3.Name = "button3";
             button3.Size = new Size(125, 101);
             button3.TabIndex = 3;
@@ -117,7 +122,7 @@
             button4.FlatAppearance.MouseDownBackColor = Color.Black;
             button4.FlatAppearance.MouseOverBackColor = Color.Gray;
             button4.ForeColor = SystemColors.InfoText;
-            button4.Location = new Point(446, 92);
+            button4.Location = new Point(441, 179);
             button4.Name = "button4";
             button4.Size = new Size(125, 101);
             button4.TabIndex = 4;
@@ -134,7 +139,7 @@
             button5.FlatAppearance.MouseDownBackColor = Color.Black;
             button5.FlatAppearance.MouseOverBackColor = Color.Gray;
             button5.ForeColor = SystemColors.InfoText;
-            button5.Location = new Point(446, 208);
+            button5.Location = new Point(441, 295);
             button5.Name = "button5";
             button5.Size = new Size(125, 101);
             button5.TabIndex = 8;
@@ -151,7 +156,7 @@
             button6.FlatAppearance.MouseDownBackColor = Color.Black;
             button6.FlatAppearance.MouseOverBackColor = Color.Gray;
             button6.ForeColor = SystemColors.InfoText;
-            button6.Location = new Point(305, 208);
+            button6.Location = new Point(300, 295);
             button6.Name = "button6";
             button6.Size = new Size(125, 101);
             button6.TabIndex = 7;
@@ -168,7 +173,7 @@
             button7.FlatAppearance.MouseDownBackColor = Color.Black;
             button7.FlatAppearance.MouseOverBackColor = Color.Gray;
             button7.ForeColor = SystemColors.InfoText;
-            button7.Location = new Point(165, 208);
+            button7.Location = new Point(160, 295);
             button7.Name = "button7";
             button7.Size = new Size(125, 101);
             button7.TabIndex = 6;
@@ -185,7 +190,7 @@
             button8.FlatAppearance.MouseDownBackColor = Color.Black;
             button8.FlatAppearance.MouseOverBackColor = Color.Gray;
             button8.ForeColor = SystemColors.InfoText;
-            button8.Location = new Point(23, 208);
+            button8.Location = new Point(18, 295);
             button8.Name = "button8";
             button8.Size = new Size(125, 101);
             button8.TabIndex = 5;
@@ -202,7 +207,7 @@
             button9.FlatAppearance.MouseDownBackColor = Color.Black;
             button9.FlatAppearance.MouseOverBackColor = Color.Gray;
             button9.ForeColor = SystemColors.InfoText;
-            button9.Location = new Point(446, 328);
+            button9.Location = new Point(441, 415);
             button9.Name = "button9";
             button9.Size = new Size(125, 101);
             button9.TabIndex = 12;
@@ -219,7 +224,7 @@
             button10.FlatAppearance.MouseDownBackColor = Color.Black;
             button10.FlatAppearance.MouseOverBackColor = Color.Gray;
             button10.ForeColor = SystemColors.InfoText;
-            button10.Location = new Point(305, 328);
+            button10.Location = new Point(300, 415);
             button10.Name = "button10";
             button10.Size = new Size(125, 101);
             button10.TabIndex = 11;
@@ -236,7 +241,7 @@
             button11.FlatAppearance.MouseDownBackColor = Color.Black;
             button11.FlatAppearance.MouseOverBackColor = Color.Gray;
             button11.ForeColor = SystemColors.InfoText;
-            button11.Location = new Point(165, 328);
+            button11.Location = new Point(160, 415);
             button11.Name = "button11";
             button11.Size = new Size(125, 101);
             button11.TabIndex = 10;
@@ -253,7 +258,7 @@
             button12.FlatAppearance.MouseDownBackColor = Color.Black;
             button12.FlatAppearance.MouseOverBackColor = Color.Gray;
             button12.ForeColor = SystemColors.InfoText;
-            button12.Location = new Point(23, 328);
+            button12.Location = new Point(18, 415);
             button12.Name = "button12";
             button12.Size = new Size(125, 101);
             button12.TabIndex = 9;
@@ -270,7 +275,7 @@
             button13.FlatAppearance.MouseDownBackColor = Color.Black;
             button13.FlatAppearance.MouseOverBackColor = Color.Gray;
             button13.ForeColor = SystemColors.InfoText;
-            button13.Location = new Point(446, 446);
+            button13.Location = new Point(441, 533);
             button13.Name = "button13";
             button13.Size = new Size(125, 101);
             button13.TabIndex = 16;
@@ -287,7 +292,7 @@
             button14.FlatAppearance.MouseDownBackColor = Color.Black;
             button14.FlatAppearance.MouseOverBackColor = Color.Gray;
             button14.ForeColor = SystemColors.InfoText;
-            button14.Location = new Point(305, 446);
+            button14.Location = new Point(300, 533);
             button14.Name = "button14";
             button14.Size = new Size(125, 101);
             button14.TabIndex = 15;
@@ -304,7 +309,7 @@
             button15.FlatAppearance.MouseDownBackColor = Color.Black;
             button15.FlatAppearance.MouseOverBackColor = Color.Gray;
             button15.ForeColor = SystemColors.InfoText;
-            button15.Location = new Point(165, 446);
+            button15.Location = new Point(160, 533);
             button15.Name = "button15";
             button15.Size = new Size(125, 101);
             button15.TabIndex = 14;
@@ -321,7 +326,7 @@
             button16.FlatAppearance.MouseDownBackColor = Color.Black;
             button16.FlatAppearance.MouseOverBackColor = Color.Gray;
             button16.ForeColor = SystemColors.InfoText;
-            button16.Location = new Point(23, 446);
+            button16.Location = new Point(18, 533);
             button16.Name = "button16";
             button16.Size = new Size(125, 101);
             button16.TabIndex = 13;
@@ -329,20 +334,83 @@
             button16.UseVisualStyleBackColor = false;
             button16.Click += btnNums;
             // 
-            // label1
+            // button17
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(23, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 32);
-            label1.TabIndex = 17;
+            button17.BackColor = SystemColors.ButtonShadow;
+            button17.Cursor = Cursors.Hand;
+            button17.FlatAppearance.BorderColor = Color.Gray;
+            button17.FlatAppearance.BorderSize = 3;
+            button17.FlatAppearance.MouseDownBackColor = Color.Black;
+            button17.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button17.ForeColor = SystemColors.InfoText;
+            button17.Location = new Point(441, 66);
+            button17.Name = "button17";
+            button17.Size = new Size(125, 101);
+            button17.TabIndex = 20;
+            button17.Text = "X";
+            button17.UseVisualStyleBackColor = false;
+            button17.Click += button17_Click;
+            // 
+            // button18
+            // 
+            button18.BackColor = SystemColors.ButtonShadow;
+            button18.Cursor = Cursors.Hand;
+            button18.FlatAppearance.BorderColor = Color.Gray;
+            button18.FlatAppearance.BorderSize = 3;
+            button18.FlatAppearance.MouseDownBackColor = Color.Black;
+            button18.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button18.ForeColor = SystemColors.InfoText;
+            button18.Location = new Point(300, 66);
+            button18.Name = "button18";
+            button18.Size = new Size(125, 101);
+            button18.TabIndex = 19;
+            button18.Text = "C";
+            button18.UseVisualStyleBackColor = false;
+            button18.Click += button18_Click;
+            // 
+            // button19
+            // 
+            button19.BackColor = SystemColors.ButtonShadow;
+            button19.Cursor = Cursors.Hand;
+            button19.FlatAppearance.BorderColor = Color.Gray;
+            button19.FlatAppearance.BorderSize = 3;
+            button19.FlatAppearance.MouseDownBackColor = Color.Black;
+            button19.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button19.ForeColor = SystemColors.InfoText;
+            button19.Location = new Point(160, 66);
+            button19.Name = "button19";
+            button19.Size = new Size(125, 101);
+            button19.TabIndex = 18;
+            button19.Text = "^";
+            button19.UseVisualStyleBackColor = false;
+            button19.Click += btnAction;
+            // 
+            // button20
+            // 
+            button20.BackColor = SystemColors.ButtonShadow;
+            button20.Cursor = Cursors.Hand;
+            button20.FlatAppearance.BorderColor = Color.Gray;
+            button20.FlatAppearance.BorderSize = 3;
+            button20.FlatAppearance.MouseDownBackColor = Color.Black;
+            button20.FlatAppearance.MouseOverBackColor = Color.Gray;
+            button20.ForeColor = SystemColors.InfoText;
+            button20.Location = new Point(18, 66);
+            button20.Name = "button20";
+            button20.Size = new Size(125, 101);
+            button20.TabIndex = 17;
+            button20.Text = "x^2";
+            button20.UseVisualStyleBackColor = false;
+            button20.Click += button20_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(588, 570);
-            Controls.Add(label1);
+            ClientSize = new Size(583, 654);
+            Controls.Add(button17);
+            Controls.Add(button18);
+            Controls.Add(button19);
+            Controls.Add(button20);
             Controls.Add(button13);
             Controls.Add(button14);
             Controls.Add(button15);
@@ -388,6 +456,9 @@
         private Button button14;
         private Button button15;
         private Button button16;
-        private Label label1;
+        private Button button17;
+        private Button button18;
+        private Button button19;
+        private Button button20;
     }
 }
