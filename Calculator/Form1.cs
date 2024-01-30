@@ -2,25 +2,29 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        double num1, num2;
-        string operation;
-        bool ActiveNum;
-        bool ActiveAct;
-        bool ActiveZ;
+        static double num1 = 0, num2 = 0;
+        static string operation;
+        static bool ActiveNum;
+        static bool ActiveAct;
+        static bool ActiveZ;
+        static bool ActiveResult = false;
 
         public Form1()
         {
             InitializeComponent();
         }
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            BackColor = Color.LightGray;
+        }
         private void btnNums(object sender, EventArgs e)
         {
             Button b = (Button)sender;
 
-            if (ActiveNum == false)
+            if (!ActiveNum)
                 textBox1.Clear();
 
-            if (b.Text == "," && ActiveZ == false)
+            if (b.Text == "," && !ActiveZ)
             {
                 ActiveZ = true;
                 if (textBox1.Text == "")
@@ -38,20 +42,22 @@ namespace Calculator
         private void btnAction(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-
-            if (ActiveAct == false)
+            if (textBox1.Text != "")
             {
-                operation = b.Text;
-                num1 = Convert.ToDouble(textBox1.Text);
-                textBox1.Clear();
+                if (!ActiveAct)
+                {
+                    operation = b.Text;
+                    num1 = Convert.ToDouble(textBox1.Text);
+                    textBox1.Clear();
+                }
+                else
+                {
+                    operation = b.Text;
+                    textBox1.Clear();
+                }
+                ActiveAct = true;
+                ActiveZ = false;
             }
-            else
-            {
-                operation = b.Text;
-                textBox1.Clear();
-            }
-            ActiveAct = true;
-            ActiveZ = false;
         }
 
         private void btnResult(object sender, EventArgs e)
@@ -73,12 +79,15 @@ namespace Calculator
                         break;
                     case "/":
                         if (num2 == 0)
-                            MessageBox.Show("Делить на ноль нельзя!",
+                            MessageBox.Show("Делить на ноль нельзя",
                                             "Сообщение",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Error);
                         else
                             textBox1.Text = (num1 / num2).ToString();
+                        break;
+                    case "^":
+                        textBox1.Text = (Math.Pow(num1, num2)).ToString();
                         break;
                     default:
                         break;
@@ -90,10 +99,27 @@ namespace Calculator
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            BackColor = Color.LightGray;
-            
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            num1 = 0;
+            num2 = 0;
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            double num = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = Convert.ToString(Math.Pow(num, 2));
         }
     }
 }
