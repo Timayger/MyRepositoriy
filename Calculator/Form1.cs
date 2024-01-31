@@ -7,7 +7,6 @@ namespace Calculator
         static bool ActiveNum;
         static bool ActiveAct;
         static bool ActiveZ;
-        static bool ActiveResult = false;
 
         public Form1()
         {
@@ -79,8 +78,8 @@ namespace Calculator
                         break;
                     case "/":
                         if (num2 == 0)
-                            MessageBox.Show("Делить на ноль нельзя",
-                                            "Сообщение",
+                            MessageBox.Show("Г„ГҐГ«ГЁГІГј Г­Г  Г­Г®Г«Гј Г­ГҐГ«ГјГ§Гї",
+                                            "Г‘Г®Г®ГЎГ№ГҐГ­ГЁГҐ",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Error);
                         else
