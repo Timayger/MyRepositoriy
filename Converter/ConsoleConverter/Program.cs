@@ -22,6 +22,7 @@ while (true)
             if (i + 1 == choice_physic_value)
             {
                 Console.WriteLine("Выберите исходную величину:");
+
                 for (int j = 0; j < cm.GetMeasureList(cm.GetPhysicValuesList()[i]).Count; j++)
                 {
                     Console.WriteLine($"{j + 1}) {cm.GetMeasureList(cm.GetPhysicValuesList()[i])[j]}");
