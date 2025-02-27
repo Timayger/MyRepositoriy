@@ -78,8 +78,7 @@ namespace Calculator
                         break;
                     case "/":
                         if (num2 == 0)
-                            MessageBox.Show("Äåëèòü íà íîëü íåëüçÿ",
-                                            "Ñîîáùåíèå",
+                            MessageBox.Show("Деление на ноль невозможно!", "Уведомление",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Error);
                         else
@@ -105,6 +104,8 @@ namespace Calculator
 
         private void button17_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text.Trim() == "")
+                return;
             textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
         }
 
@@ -117,6 +118,8 @@ namespace Calculator
 
         private void button20_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text.Trim() == "")
+                return;
             double num = Convert.ToDouble(textBox1.Text);
             textBox1.Text = Convert.ToString(Math.Pow(num, 2));
         }

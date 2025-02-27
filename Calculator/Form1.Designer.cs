@@ -58,6 +58,7 @@
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Location = new Point(18, 21);
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.Size = new Size(548, 39);
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
